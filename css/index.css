@@ -123,8 +123,12 @@ footer ul li {
   user-select:none;
 }
 
+footer ul li:first-child {
+  padding-left:0;
+}
+
 footer ul li:last-child {
-  padding:0;
+  padding-right:0;
 }
 
 footer ul li:hover {
