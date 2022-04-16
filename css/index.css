@@ -123,6 +123,10 @@ footer ul li {
   user-select:none;
 }
 
+footer ul li:last-child {
+  padding:0;
+}
+
 footer ul li:hover {
   color:#ffdeec;
 }
@@ -167,6 +171,21 @@ footer ul li:hover {
 
   .large-screen {
     display:none;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  header h1 {
+    font-size: 30pt;
+  }
+
+  .reduce-size {
+    font-size:16pt;
+  }
+
+  footer li {
+    padding-top:10px;
+    padding-bottom:10px;
   }
 }
 
