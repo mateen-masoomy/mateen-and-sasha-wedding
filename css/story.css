@@ -1,18 +1,18 @@
 header {
   padding: 10px 20px;
-  background-color:#fff2f7;
-  border-bottom:1px solid #ffdeec;
-  text-align:center;
+  background-color: #fff2f7;
+  border-bottom: 1px solid #ffdeec;
+  text-align: center;
 }
 
 header h2 {
-  padding:10px;
-  margin:0;
-  color:#ffdeec;
-  font-size:18pt;
+  padding: 10px;
+  margin: 0;
+  color: #ffdeec;
+  font-size: 18pt;
 }
 
 .content {
-  padding:10px 40px;
-  font-family: "roboto slab";
+  padding: 10px 40px;
+  font-family: "robotoslab";
 }

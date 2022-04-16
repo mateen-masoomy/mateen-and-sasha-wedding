@@ -1,90 +1,119 @@
-
-body, html {
-  background-color:#ffdeec;
+body,
+html {
+  background-color: #ffdeec;
 }
 
 header {
-  position:absolute;
-  top:0;
-  left:0;
-  color:#222;
-  width:100%;
-  text-align:center;
-  padding:10px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #222;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
   user-select: none;
 }
 
 header h4 {
   display: grid;
-  grid-auto-flow:column;
+  grid-auto-flow: column;
   grid-template-columns: 1fr 30px 1fr;
-  font-size:14pt;
-  margin:0;
-  margin-top:15px;
-  margin-bottom:5px;
-  color:#ffffff;
+  font-size: 14pt;
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #ffffff;
 }
 
 header h4 div:nth-child(1) {
- text-align:right;
+  text-align: right;
 }
 
 header h4 div:nth-child(3) {
- text-align:left;
+  text-align: left;
 }
 
 header h1 {
-  margin:0;
+  margin: 0;
   font-family: pacifico;
-  font-weight:200;
-  color:#ffffff;
-  width:100%;
+  font-weight: 200;
+  color: #ffffff;
+  width: 100%;
   font-size: 50pt;
   line-height: 70pt;
-  padding:5px 0;
+  padding: 5px 0;
 }
 
 header img {
-  margin-top:30px;
+  margin-top: 30px;
   width: 160px;
-  height:auto;
-  filter: drop-shadow(1px 1px 0 #ffdeec) drop-shadow(-1px -1px 0 #ffdeec) drop-shadow(0px -1px 0 #ffdeec) drop-shadow(0px 1px 0 #ffdeec) drop-shadow(-1px 0px 0 #ffdeec) drop-shadow(1px 0px 0 #ffdeec);
+  height: auto;
+  filter: drop-shadow(1px 1px 0 #ffdeec) drop-shadow(-1px -1px 0 #ffdeec)
+    drop-shadow(0px -1px 0 #ffdeec) drop-shadow(0px 1px 0 #ffdeec)
+    drop-shadow(-1px 0px 0 #ffdeec) drop-shadow(1px 0px 0 #ffdeec);
 }
 
 .main {
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100%;
-  width:100%;
-  padding-top:100px;
-  padding-bottom:50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
 
 .main img {
   width: auto;
   height: auto;
-  max-height:100%;
-  max-width:100%;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .drawer {
-  position:fixed;
-  bottom:50px;
-  left:50%;
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
   transform: translateX(-50%) translateY(100%) translateZ(0px);
-  height:calc(100% - 120px);
-  width:100%;
-  border-radius:5px 5px 0 0;
-  overflow:hidden;
-  max-width:1000px;
-  background-color:white;
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  background-color: white;
   box-shadow: 0 0px 5px #22222240;
+}
+
+.iframe-drawer {
+  height: calc(100% - 120px);
+}
+
+.menu-drawer {
+  height: 200px;
+  background-color: #fff2f7;
+}
+
+.menu-drawer ul {
+  margin: 0;
+}
+
+.menu-drawer ul li {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  border-bottom: 1px solid #ffdeec;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-drawer ul li.active {
+  background-color: #ffdeec;
 }
 
 .drawer-animated {
   transition-property: transform;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
 }
 
 .drawer-slide-in {
@@ -92,110 +121,173 @@ header img {
 }
 
 .drawer iframe {
-  border:none;
-  width:100%;
-  height:100%;
+  border: none;
+  width: 100%;
+  height: 100%;
 }
 
 footer {
-  position:absolute;
-  bottom:0;
-  left:0;
-  width:100%;
-  background-color:#222;
-  display:flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222;
+  display: flex;
   align-items: center;
   justify-content: center;
+  height: 50px;
 }
 
-footer, footer ul {
-  cursor:default;
-  user-select:none;
+footer,
+footer ul,
+.menu-drawer ul {
+  cursor: default;
+  user-select: none;
+}
+
+footer ul,
+.menu-drawer ul {
+  padding-left: 0;
+}
+
+footer ul li,
+.menu-drawer ul li {
+  list-style-type: none;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 footer ul li {
   display: inline-block;
-  padding:0 20px;
-  font-weight:bold;
-  color:white;
-  list-style-type: none;
-  cursor: pointer;
-  user-select:none;
+  padding: 0 20px;
+  font-weight: bold;
+  color: white;
 }
 
 footer ul li:first-child {
-  padding-left:0;
+  padding-left: 0;
 }
 
 footer ul li:last-child {
-  padding-right:0;
+  padding-right: 0;
 }
 
 footer ul li:hover {
-  color:#ffdeec;
+  color: #ffdeec;
+}
+
+footer .menu-toggle {
+  width: 70px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #ffffff;
+  color: #222;
+  display: none;
+  font-weight: bold;
+  font-size: 16pt;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+footer .menu-toggle:hover {
+  background-color: #ffdeec;
+}
+
+footer .menu-toggle:active {
+  background-color: #ffd0e4;
 }
 
 .small-screen {
-  display:none;
+  display: none;
 }
 
-@keyframes drawer-slide-in {
-  0% { transform: translateX(-50%) translateY(100%) translateZ(0px); }
-  100% { transform: translateX(-50%) translateY(0%) translateZ(0px); }
+.small-nav {
+  display: none;
 }
 
 @media only screen and (max-width: 1000px) {
   .drawer {
-    border-radius:0;
+    border-radius: 0;
   }
 }
 
-@media only screen and (max-width: 750px), (max-height:750px) {
+@media only screen and (max-width: 750px) {
+  .large-nav {
+    display: none;
+  }
+
+  .small-nav {
+    display: block;
+  }
+
+  footer .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 750px), (max-height: 750px) {
   .small-screen {
-    display:block;
+    display: block;
   }
 
   .reduce-size {
-    font-size:20pt;
-    vertical-align:middle;
+    font-size: 20pt;
+    vertical-align: middle;
   }
 
   header h4 {
-    margin-top:5px;
-    margin-bottom:0;
+    margin-top: 5px;
+    margin-bottom: 0;
   }
 
-  .drawer {
-    height:calc(100% - 100px);
+  .iframe-drawer {
+    height: calc(100% - 100px);
   }
 
   header img {
-    margin-top:10px;
+    margin-top: 10px;
   }
 
   .large-screen {
-    display:none;
+    display: none;
   }
 }
 
 @media screen and (max-width: 479px) {
   header h1 {
     font-size: 30pt;
+    line-height: 40pt;
+    margin-top: 10px;
   }
 
   .reduce-size {
-    font-size:16pt;
+    font-size: 16pt;
   }
 
   footer li {
-    padding-top:10px;
-    padding-bottom:10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  header h1 {
+    margin-top: 20px;
+    word-spacing: 400px;
+    margin-bottom: 20px;
+  }
+
+  .main img {
+    display: none;
   }
 }
 
 @media only screen and (max-height: 750px) {
   .main {
-    padding-top:25px;
+    padding-top: 25px;
   }
 }
 

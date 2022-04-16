@@ -1,40 +1,76 @@
 <html>
-    <head>
-      <title>Mateen & Sasha</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1"/>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="css/global.css">
-      <link rel="stylesheet" href="css/index.css">
-    </head>
+  <head>
+    <title>Mateen & Sasha</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
 
-    <body>
-      <header>
-        <h4 class="stroke-text"><div>July 1st, 2022</div><div>&bull;</div><div>July 2nd, 2022</div></h4>
-        <h1 class="stroke-text large-screen">Mateen Masoomy <br> Chevelle 'Sasha' Blackella</h1>
-        <h1 class="stroke-text small-screen">Mateen <span class="reduce-size">&</span> Sasha</h1>
-        <img src="assets/rings.png">
-      </header>
+  <body>
+    <header>
+      <h4 class="stroke-text">
+        <div>July 1st<span class="large-screen">, 2022</span></div>
+        <div>&bull;</div>
+        <div>July 2nd<span class="large-screen">, 2022</span></div>
+      </h4>
+      <h1 class="stroke-text large-screen">
+        Mateen Masoomy <br />
+        Chevelle 'Sasha' Blackella
+      </h1>
+      <h1 class="stroke-text small-screen">
+        Mateen <span class="reduce-size">&</span> Sasha
+      </h1>
+      <img src="assets/rings.png" />
+    </header>
 
-      <section class="main">
-        <img src="assets/drawing-transparent.png">
-      </section>
+    <section class="main">
+      <img src="assets/drawing-transparent.png" />
+    </section>
 
-      <section class="drawer">
-        <iframe id="story" class="hidden" src="story.html" frame-border="0"></iframe>
-        <iframe id="venue" class="hdiden" src="venue.html" frame-border="0"></iframe>
-        <iframe id="weddingParty" class="hidden" src="wedding-party.html" frame-border="0"></iframe>
-      </section>
+    <section class="drawer iframe-drawer">
+      <iframe
+        id="story"
+        class="hidden"
+        src="story.html"
+        frame-border="0"
+      ></iframe>
+      <iframe
+        id="venue"
+        class="hdiden"
+        src="venue.html"
+        frame-border="0"
+      ></iframe>
+      <iframe
+        id="weddingParty"
+        class="hidden"
+        src="wedding-party.html"
+        frame-border="0"
+      ></iframe>
+      <iframe id="rsvp" class="hidden" frame-border="0"></iframe>
+    </section>
 
-      <footer>
-        <ul>
-          <li data-id="story">Our Story</li>
-          <li data-id="venue">Venue</li>
-          <li data-id="weddingParty">Wedding Party</li>
-        </ul>
-      </footer>
+    <section class="drawer menu-drawer small-nav">
+      <ul>
+        <li data-id="story">Our Story</li>
+        <li data-id="venue">Venue</li>
+        <li data-id="weddingParty">Wedding Party</li>
+        <li data-id="rsvp">RSVP</li>
+      </ul>
+    </section>
 
-      <script src="scripts/index.js"></script>
-    </body>
+    <footer>
+      <ul class="large-nav">
+        <li data-id="story">Our Story</li>
+        <li data-id="venue">Venue</li>
+        <li data-id="weddingParty">Wedding Party</li>
+        <li data-id="rsvp">RSVP</li>
+      </ul>
+
+      <div class="menu-toggle small-nav">
+        <span>&bull;&bull;&bull;</span>
+      </div>
+    </footer>
+
+    <script src="scripts/index.js"></script>
+  </body>
 </html>
