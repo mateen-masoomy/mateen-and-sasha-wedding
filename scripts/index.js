@@ -2,10 +2,7 @@
   var rsvpUrl =
     "https://docs.google.com/forms/d/e/1FAIpQLSdw_dBNjWg4-0Ncn9zkTk4hDzS9mKlMR4l0hYt4iHKPOdRVrw/viewform?embedded=true";
 
-  var loader = setInterval(function () {
-    if (document.readyState !== "complete") return;
-    window.clearInterval(loader);
-
+  window.onload = function () {
     checkForGuestName();
 
     var footerNavLinks = document.querySelectorAll("footer li");
@@ -24,7 +21,7 @@
     menuToggle.addEventListener("click", function () {
       navMenu.classList.toggle("drawer-slide-in");
     });
-  }, 300);
+  };
 
   function prepareNavLinks(navLinks, navDrawer, iframeDrawer) {
     for (var i = 0; i < navLinks.length; i++) {
