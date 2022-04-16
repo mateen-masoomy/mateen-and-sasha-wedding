@@ -2,7 +2,10 @@
   var rsvpUrl =
     "https://docs.google.com/forms/d/e/1FAIpQLSdw_dBNjWg4-0Ncn9zkTk4hDzS9mKlMR4l0hYt4iHKPOdRVrw/viewform?embedded=true";
 
-  window.onload = function () {
+  var loader = setInterval(function () {
+    if (document.readyState !== "complete") return;
+    window.clearInterval(loader);
+
     checkForGuestName();
 
     var footerNavLinks = document.querySelectorAll("footer li");
@@ -21,7 +24,7 @@
     menuToggle.addEventListener("click", function () {
       navMenu.classList.toggle("drawer-slide-in");
     });
-  };
+  }, 300);
 
   function prepareNavLinks(navLinks, navDrawer, iframeDrawer) {
     for (var i = 0; i < navLinks.length; i++) {
@@ -51,9 +54,9 @@
   function checkForGuestName() {
     var params = new URLSearchParams(window.location.search);
     var guest = params.get("name");
+    var rsvpIframe = document.querySelector("#rsvp");
 
     if (guest) {
-      var rsvpIframe = document.querySelector("#rsvp");
       var nameParts = guest.split(" ");
       var formattedName = nameParts.join("+");
       rsvpIframe.src = rsvpUrl + "&usp=pp_url&entry.125665203=" + formattedName;
