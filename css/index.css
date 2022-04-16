@@ -190,6 +190,12 @@ footer .menu-toggle {
   -webkit-tap-highlight-color: transparent;
 }
 
+footer .menu-toggle span {
+  position: relative;
+  line-height: 0;
+  top: 1px;
+}
+
 footer .menu-toggle:hover {
   background-color: #ffdeec;
 }
