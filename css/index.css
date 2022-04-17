@@ -173,8 +173,12 @@ footer ul li:last-child {
   padding-right: 0;
 }
 
-footer ul li:hover {
+footer ul li.active {
   color: #ffdeec;
+}
+
+footer ul li:active {
+  color: #ffd0e4;
 }
 
 footer .menu-toggle {
@@ -194,10 +198,6 @@ footer .menu-toggle span {
   position: relative;
   line-height: 0;
   top: 1px;
-}
-
-footer .menu-toggle:hover {
-  background-color: #ffdeec;
 }
 
 footer .menu-toggle:active {

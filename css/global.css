@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "RobotoSlab";
-  src: url("fonts/RobotoSlab-VariableFont_wght.ttf");
+  src: url("fonts/Montserrat-VariableFont_wght.ttf");
 }
 
 @font-face {
@@ -32,8 +32,8 @@ html {
 
 .stroke-text {
   color: white;
-  text-shadow: 1px 1px #ffd0e4, -1px -1px #ffd0e4, 1px 0 #ffd0e4, 0 1px #ffd0e4,
-    -1px 0 #ffd0e4, 0 -1px #ffd0e4, 1px -1px #ffd0e4, -1px 1px #ffd0e4,
+  text-shadow: 1px 1px #ffbcd8, -1px -1px #ffbcd8, 1px 0 #ffbcd8, 0 1px #ffbcd8,
+    -1px 0 #ffbcd8, 0 -1px #ffbcd8, 1px -1px #ffbcd8, -1px 1px #ffbcd8,
     2px 2px #222, -2px -2px #222, 2px 0 #222, 0 2px #222, -2px 0 #222,
     0 -2px #222, 2px -2px #222, -2px 2px #222, 1px 2px #222, -1px 2px #222,
     1px -2px #222, -1px -2px #222, 2px 1px #222, 2px -1px #222, -2px 1px #222,

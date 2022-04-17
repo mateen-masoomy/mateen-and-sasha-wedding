@@ -23,6 +23,7 @@
 
     menuToggle.addEventListener("click", function () {
       navMenu.classList.toggle("drawer-slide-in");
+      navMenu.focus();
     });
   }, 300);
 

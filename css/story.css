@@ -8,11 +8,47 @@ header {
 header h2 {
   padding: 10px;
   margin: 0;
-  color: #ffdeec;
+  color: #222;
   font-size: 18pt;
+  font-family: "comfortaa";
 }
 
 .content {
-  padding: 10px 40px;
+  padding: 40px;
+  padding-top: 20px;
   font-family: "robotoslab";
+}
+
+.content img {
+  max-height: 400px;
+  float: right;
+  margin-left: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 2px #dfdfdf30;
+}
+
+.content .love-sick-puppy {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 0;
+  float: none;
+  width: 100%;
+}
+
+.content img:last-child {
+  float: none;
+  position: relative;
+  height: 350px;
+  object-fit: cover;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+hr {
+  border-color: #ffdeec;
+  border-style: solid;
+  border-top: none;
 }
