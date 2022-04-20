@@ -19,7 +19,7 @@ header h2 {
   font-family: "robotoslab";
 }
 
-.content img {
+.content .us {
   max-height: 400px;
   float: right;
   margin-left: 20px;
@@ -30,25 +30,27 @@ header h2 {
 .content .love-sick-puppy {
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-left: 0;
-  float: none;
   width: 100%;
 }
 
-.content img:last-child {
-  float: none;
-  position: relative;
-  height: 350px;
-  object-fit: cover;
-  overflow: hidden;
+.content .proposal {
   width: 100%;
   margin: 0;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 hr {
   border-color: #ffdeec;
   border-style: solid;
   border-top: none;
+}
+
+@media screen and (max-width: 650px) {
+  .content .us {
+    float: none;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 100%;
+    object-fit: contain;
+  }
 }
