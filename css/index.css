@@ -12,6 +12,7 @@ header {
   text-align: center;
   padding: 10px 0;
   user-select: none;
+  -webkit-user-select: none;
 }
 
 header h4 {
@@ -143,6 +144,7 @@ footer ul,
 .menu-drawer ul {
   cursor: default;
   user-select: none;
+  -webkit-user-select: none;
 }
 
 footer ul,
@@ -155,6 +157,7 @@ footer ul li,
   list-style-type: none;
   cursor: pointer;
   user-select: none;
+  -webkit-user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -293,12 +296,37 @@ footer .menu-toggle:active {
 
 @media only screen and (max-height: 750px) {
   .main {
-    padding-top: 25px;
+    padding-top: 45px;
   }
 }
 
 @media only screen and (max-height: 520px) {
   .main img {
     display: none;
+  }
+}
+
+@media only screen and (max-height: 365px) {
+  header img {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-height: 365px) {
+  header h1 {
+    padding-bottom: 0;
+    line-height: 60pt;
+  }
+}
+
+@media only screen and (max-height: 315px) {
+  header h1 {
+    font-size: 20vh;
+    line-height: 25vh;
+  }
+
+  header img {
+    height: 30vh;
+    width: auto;
   }
 }
