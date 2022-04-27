@@ -63,7 +63,7 @@ var CardScript = (function () {
     window.setTimeout(function () {
       applyAnimations();
     });
-  }, 1000);
+  }, 300);
 
   function applyRatio(ratio) {
     var envelopeBodyEls = document.querySelectorAll(envelopeBody.selector);
@@ -104,6 +104,14 @@ var CardScript = (function () {
   }
 
   function imageLoaded(img) {
-    imageData[img.id].loaded = true;
+    function rendered() {
+      imageData[img.id].loaded = true;
+    }
+
+    function startRender() {
+      requestAnimationFrame(rendered);
+    }
+
+    requestAnimationFrame(startRender);
   }
 })();
