@@ -59,7 +59,7 @@ a {
 }
 
 .envelope-inner .envelope-body-bottom {
-  background-color: white;
+  background-color: #fff2f7;
 }
 
 .envelope-flap {
@@ -87,11 +87,11 @@ a {
 }
 
 .envelope-flap-body {
-  background-color: #ffbcd8;
+  background-color: #fff2f7;
 }
 
 .envelope-inner .envelope-flap-body {
-  background-color: white;
+  background-color: #fff2f7;
 }
 
 .envelope-fold {
@@ -101,7 +101,7 @@ a {
   position: absolute;
   top: 61.6%;
   transform: translateY(-50%);
-  background-color: white;
+  background-color: #fff2f7;
   box-shadow: 0 -3px 5px rgba(150, 150, 150, 0.07);
   z-index: 1;
 }
