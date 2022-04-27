@@ -63,7 +63,7 @@ var CardScript = (function () {
     window.setTimeout(function () {
       applyAnimations();
     });
-  }, 300);
+  }, 1000);
 
   function applyRatio(ratio) {
     var envelopeBodyEls = document.querySelectorAll(envelopeBody.selector);
