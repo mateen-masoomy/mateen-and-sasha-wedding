@@ -20,10 +20,7 @@
     fontSize: 14,
   };
 
-  var loader = setInterval(function () {
-    if (document.readyState !== "complete") return;
-    window.clearInterval(loader);
-
+  window.onload = function () {
     var view = document.querySelector(".view-panel");
     var width = view.clientWidth;
     var height = view.clientHeight;
@@ -40,7 +37,7 @@
     window.setTimeout(function () {
       applyAnimations();
     });
-  }, 300);
+  };
 
   function applyRatio(ratio) {
     var envelopeBodyEls = document.querySelectorAll(envelopeBody.selector);
@@ -65,6 +62,9 @@
     var container = document.querySelector(".container");
     container.style.width = cardWidth * ratio + "px";
     container.style.height = cardHeight * ratio + "px";
+
+    var inviteEl = document.querySelector(invite.selector);
+    inviteEl.style.fontSize = invite.fontSize * (ratio * 1.5) + "px";
   }
 
   function applyAnimations() {
