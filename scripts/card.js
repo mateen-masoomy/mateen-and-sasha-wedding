@@ -23,20 +23,31 @@ var CardScript = (function () {
   var imageData = {
     drawing: {
       loaded: false,
-      src: "assets/drawing-transparent.png",
+      src: "assets/drawing-transparent",
     },
     rings: {
       loaded: false,
-      src: "assets/rings.png",
+      src: "assets/rings",
     },
   };
 
+  var isMobile = false;
+
   window.onload = function () {
     var images = document.querySelectorAll("img");
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+
+    alert(width);
+
+    if (width || height < 700) {
+      isMobile = true;
+    }
+
     for (var n = 0; n < images.length; n++) {
       var img = images[n];
       img.onload = imageLoaded(img);
-      img.src = imageData[img.id].src;
+      img.src = imageData[img.id].src + (isMobile ? "-mobile" : "") + ".png";
     }
   };
 
