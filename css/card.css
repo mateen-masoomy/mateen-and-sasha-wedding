@@ -59,7 +59,7 @@ a {
 }
 
 .envelope-inner .envelope-body-bottom {
-  background-color: #ffdeec;
+  background-color: white;
 }
 
 .envelope-flap {
@@ -91,7 +91,7 @@ a {
 }
 
 .envelope-inner .envelope-flap-body {
-  background-color: #ffdeec;
+  background-color: white;
 }
 
 .envelope-fold {
@@ -101,7 +101,7 @@ a {
   position: absolute;
   top: 61.6%;
   transform: translateY(-50%);
-  background-color: #ffdeec;
+  background-color: white;
   box-shadow: 0 -3px 5px rgba(150, 150, 150, 0.07);
   z-index: 1;
 }
@@ -280,13 +280,13 @@ a {
   z-index: -1;
 }
 
-.invite .rings {
+.invite #rings {
   top: 42%;
   width: 37%;
   filter: drop-shadow(0 0 1px #00000020);
 }
 
-.invite .drawing {
+.invite #drawing {
   top: 55%;
   width: 90%;
 }

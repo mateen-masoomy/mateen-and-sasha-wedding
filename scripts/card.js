@@ -1,4 +1,4 @@
-(function () {
+var CardScript = (function () {
   var cardHeight = 700;
   var cardWidth = 600;
   var padding = 10;
@@ -20,7 +20,22 @@
     fontSize: 14,
   };
 
-  window.onload = function () {
+  var imagesLoaded = {
+    drawing: false,
+    rings: false,
+  };
+
+  document.querySelectorAll("img").forEach(function (img) {
+    img.onload = imageLoaded(img);
+  });
+
+  var loader = window.setInterval(function () {
+    if (!imagesLoaded.drawing || !imagesLoaded.rings) {
+      return;
+    }
+
+    window.clearInterval(loader);
+
     var view = document.querySelector(".view-panel");
     var width = view.clientWidth;
     var height = view.clientHeight;
@@ -37,7 +52,7 @@
     window.setTimeout(function () {
       applyAnimations();
     });
-  };
+  }, 300);
 
   function applyRatio(ratio) {
     var envelopeBodyEls = document.querySelectorAll(envelopeBody.selector);
@@ -75,5 +90,9 @@
     document
       .querySelector(".envelope-front-container")
       .classList.add("animate-envelope-front");
+  }
+
+  function imageLoaded(img) {
+    imagesLoaded[img.id] = true;
   }
 })();
