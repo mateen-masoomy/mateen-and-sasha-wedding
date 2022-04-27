@@ -20,17 +20,28 @@ var CardScript = (function () {
     fontSize: 14,
   };
 
-  var imagesLoaded = {
-    drawing: false,
-    rings: false,
+  var imageData = {
+    drawing: {
+      loaded: false,
+      src: "assets/drawing-transparent.png",
+    },
+    rings: {
+      loaded: false,
+      src: "assets/rings.png",
+    },
   };
 
-  document.querySelectorAll("img").forEach(function (img) {
-    img.onload = imageLoaded(img);
-  });
+  window.onload = function () {
+    var images = document.querySelectorAll("img");
+    for (var n = 0; n < images.length; n++) {
+      var img = images[n];
+      img.onload = imageLoaded(img);
+      img.src = imageData[img.id].src;
+    }
+  };
 
   var loader = window.setInterval(function () {
-    if (!imagesLoaded.drawing || !imagesLoaded.rings) {
+    if (!imageData.drawing.loaded || !imageData.rings.loaded) {
       return;
     }
 
@@ -93,6 +104,6 @@ var CardScript = (function () {
   }
 
   function imageLoaded(img) {
-    imagesLoaded[img.id] = true;
+    imageData[img.id].loaded = true;
   }
 })();

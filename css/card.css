@@ -213,6 +213,7 @@ a {
   transform: translateX(-50%);
   font-family: Montserrat;
   font-size: 20px;
+  overflow: hidden;
 }
 
 .invite-texture {
