@@ -243,18 +243,10 @@ a {
 
 .invite-text p:not(:first-child) {
   font-size: 3.75em;
-  line-height: 3em;
+  line-height: 1.2em;
   color: #222;
-  text-shadows: -1px 0px 0px #ffdeec, -1px -1px 0px #ffdeec, 1px 0px 0px #ffdeec,
-    1px 0px 0px #ffdeec, 1px -1px 0px #222, 1px 1px 0px #222, 0px 1px 0px #222,
-    2px 0px 0px #222, -2px 1px 0px #222, 0 2px 5px #ffbcd8, -2px 0px 5px #ffdeec,
-    5px 0px 10px #fff, -5px 0px 10px #fff;
-}
-
-.invite-text p:last-child {
-  line-height: 1.1em;
-  font-size: 1.9em;
-  display: none;
+  text-shadow: 0 5px 20px #ffffff60, 0 -5px 20px #ffffff60,
+    5px 0px 20px #ffffff60, -5px 0px 20px #ffffff60;
 }
 
 .invite-text p span {
@@ -277,7 +269,9 @@ a {
   filter: drop-shadow(0px 0px 1px #22222250) drop-shadow(0 2px 5px #ffbcd8)
     drop-shadow(-2px 0px 5px #ffdeec) drop-shadow(0 5px 20px #ffffff60)
     drop-shadow(0 -5px 20px #ffffff60) drop-shadow(5px 0px 20px #ffffff60)
-    drop-shadow(-5px 0px 20px #ffffff60);
+    drop-shadow(-5px 0px 20px #ffffff60) drop-shadow(0 5px 20px #fff2f7)
+    drop-shadow(0 -5px 20px #fff2f7) drop-shadow(5px 0px 20px #fff2f7)
+    drop-shadow(-5px 0px 20px #fff2f7);
 }
 
 .invite #drawing {
@@ -285,28 +279,33 @@ a {
   width: 90%;
   top: 53.5%;
   width: 110%;
-  opacity: 0.09;
+  opacity: 0.4;
   z-index: -3;
-  filter: drop-shadow(0 0 2px #00000060);
+  filter: drop-shadow(0px 0px 1px #22222250) drop-shadow(0 2px 5px #ffbcd8)
+    drop-shadow(-2px 0px 5px #ffdeec) drop-shadow(0 5px 20px #ffffff60)
+    drop-shadow(0 -5px 20px #ffffff60) drop-shadow(5px 0px 20px #ffffff60)
+    drop-shadow(-5px 0px 20px #ffffff60) drop-shadow(0 5px 20px #fff2f7)
+    drop-shadow(0 -5px 20px #fff2f7) drop-shadow(5px 0px 20px #fff2f7)
+    drop-shadow(-5px 0px 20px #fff2f7);
 }
 
 .gradient {
   position: absolute;
-  top: 14%;
+  top: 7%;
   z-index: -2;
   width: 100%;
   height: 30%;
   background: rgb(255, 255, 255);
   background: linear-gradient(
     0deg,
-    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 254, 255, 0) 0%,
     #fff2f7 50%,
     rgba(255, 255, 255, 0) 100%
   );
 }
 
 .lower-gradient {
-  top: 72%;
+  top: 70%;
 }
 
 .invite-footer {
