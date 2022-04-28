@@ -244,8 +244,8 @@ a {
 .invite-text p:not(:first-child) {
   font-size: 3.75em;
   line-height: 3em;
-  color: #222;
-  text-shadows: -1px 0px 0px #ffdeec, -1px -1px 0px #ffdeec, 1px 0px 0px #ffdeec,
+  color: white;
+  text-shadow: -1px 0px 0px #ffdeec, -1px -1px 0px #ffdeec, 1px 0px 0px #ffdeec,
     1px 0px 0px #ffdeec, 1px -1px 0px #222, 1px 1px 0px #222, 0px 1px 0px #222,
     2px 0px 0px #222, -2px 1px 0px #222, 0 2px 5px #ffbcd8, -2px 0px 5px #ffdeec,
     5px 0px 10px #fff, -5px 0px 10px #fff;
