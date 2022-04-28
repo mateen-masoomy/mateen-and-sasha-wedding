@@ -13,6 +13,11 @@
   src: url("fonts/Pacifico-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Dancing";
+  src: url("fonts/DancingScript-VariableFont_wght.ttf");
+}
+
 * {
   box-sizing: border-box;
 }

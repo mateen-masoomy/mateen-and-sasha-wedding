@@ -23,7 +23,7 @@ var CardScript = (function () {
   var imageData = {
     drawing: {
       loaded: false,
-      src: "assets/drawing-transparent",
+      src: "assets/rings",
     },
     rings: {
       loaded: false,
@@ -38,10 +38,9 @@ var CardScript = (function () {
     var width = window.innerWidth;
     var height = window.innerHeight;
 
-    alert(width);
-
     if (width || height < 700) {
       isMobile = true;
+      isMobile = false;
     }
 
     for (var n = 0; n < images.length; n++) {
@@ -62,8 +61,8 @@ var CardScript = (function () {
     var width = view.clientWidth;
     var height = view.clientHeight;
 
-    var widthRatio = width / (cardWidth + padding * 2);
-    var heightRatio = height / (cardHeight + padding * 2);
+    var widthRatio = width / cardWidth;
+    var heightRatio = height / cardHeight;
 
     if (widthRatio < heightRatio) {
       applyRatio(widthRatio);
